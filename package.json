@@ -1,0 +1,16 @@
+{
+  "name": "@typed-mxgraph/typed-mxgraph",
+  "version": "0.0.1",
+  "author": "鸿则 <hungtcs@163.com>",
+  "license": "Apache-2.0",
+  "scripts": {},
+  "devDependencies": {
+    "typescript": "^3.9.3"
+  },
+  "peerDependencies": {
+    "mxgraph": "^4.2.0"
+  },
+  "description": "mxGraph wrapper with Typescript declarations",
+  "main": "src/mxgraph.d.ts",
+  "dependencies": {}
+}
