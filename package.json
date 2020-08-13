@@ -11,6 +11,6 @@
     "mxgraph": "^4.2.0"
   },
   "description": "mxGraph wrapper with Typescript declarations",
-  "main": "src/mxgraph.d.ts",
+  "main": "index.d.ts",
   "dependencies": {}
 }
