@@ -1,4 +1,12 @@
+/// <reference path="./handler/index.d.ts" />
+/// <reference path="./io/index.d.ts" />
+/// <reference path="./layout/index.d.ts" />
+/// <reference path="./model/index.d.ts" />
+/// <reference path="./util/index.d.ts" />
+/// <reference path="./view/index.d.ts" />
+
 declare module 'mxgraph' {
+
   export interface mxGraphExportObject {
     mxClient: any;
     mxLog: typeof mxLog;
