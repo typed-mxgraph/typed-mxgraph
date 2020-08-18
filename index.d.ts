@@ -4,18 +4,18 @@
 /// <reference path="./model/index.d.ts" />
 /// <reference path="./util/index.d.ts" />
 /// <reference path="./view/index.d.ts" />
+/// <reference path="./mxClient.d.ts" />
 
 declare module 'mxgraph' {
-
   export interface mxGraphExportObject {
-    mxClient: any;
+    mxClient: typeof mxClient;
     mxLog: typeof mxLog;
-    mxObjectIdentity: any;
+    mxObjectIdentity: typeof mxObjectIdentity;
     mxDictionary: typeof mxDictionary;
     mxResources: typeof mxResources;
     mxPoint: typeof mxPoint;
     mxRectangle: typeof mxRectangle;
-    mxEffects: any;
+    mxEffects: typeof mxEffects;
     mxUtils: typeof mxUtils;
     mxConstants: typeof mxConstants;
     mxEventObject: typeof mxEventObject;
@@ -23,23 +23,23 @@ declare module 'mxgraph' {
     mxEventSource: typeof mxEventSource;
     mxEvent: typeof mxEvent;
     mxXmlRequest: typeof mxXmlRequest;
-    mxClipboard: any;
-    mxWindow: any;
-    mxForm: any;
+    mxClipboard: typeof mxClipboard;
+    mxWindow: typeof mxWindow;
+    mxForm: typeof mxForm;
     mxImage: typeof mxImage;
-    mxDivResizer: any;
+    mxDivResizer: typeof mxDivResizer;
     mxDragSource: typeof mxDragSource;
-    mxToolbar: any;
+    mxToolbar: typeof mxToolbar;
     mxUndoableEdit: typeof mxUndoableEdit;
-    mxUndoManager: any;
+    mxUndoManager: typeof mxUndoManager;
     mxUrlConverter: typeof mxUrlConverter;
     mxPanningManager: typeof mxPanningManager;
     mxPopupMenu: typeof mxPopupMenu;
-    mxAutoSaveManager: any;
-    mxAnimation: any;
+    mxAutoSaveManager: typeof mxAutoSaveManager;
+    mxAnimation: typeof mxAnimation;
     mxMorphing: typeof mxMorphing;
     mxImageBundle: typeof mxImageBundle;
-    mxImageExport: any;
+    mxImageExport: typeof mxImageExport;
     mxAbstractCanvas2D: typeof mxAbstractCanvas2D;
     mxXmlCanvas2D: typeof mxXmlCanvas2D;
     mxSvgCanvas2D: typeof mxSvgCanvas2D;
@@ -69,7 +69,7 @@ declare module 'mxgraph' {
     mxSwimlane: typeof mxSwimlane;
     mxGraphLayout: typeof mxGraphLayout;
     mxStackLayout: typeof mxStackLayout;
-    mxPartitionLayout: any;
+    mxPartitionLayout: typeof mxPartitionLayout;
     mxCompactTreeLayout: typeof mxCompactTreeLayout;
     mxRadialTreeLayout: typeof mxRadialTreeLayout;
     mxFastOrganicLayout: typeof mxFastOrganicLayout;
@@ -110,7 +110,7 @@ declare module 'mxgraph' {
     mxLayoutManager: typeof mxLayoutManager;
     mxSwimlaneManager: typeof mxSwimlaneManager;
     mxTemporaryCellStates: typeof mxTemporaryCellStates;
-    mxCellStatePreview: any;
+    mxCellStatePreview: typeof mxCellStatePreview;
     mxConnectionConstraint: typeof mxConnectionConstraint;
     mxGraphHandler: typeof mxGraphHandler;
     mxPanningHandler: typeof mxPanningHandler;
@@ -120,7 +120,7 @@ declare module 'mxgraph' {
     mxConnectionHandler: typeof mxConnectionHandler;
     mxConstraintHandler: typeof mxConstraintHandler;
     mxRubberband: typeof mxRubberband;
-    mxHandle: any;
+    mxHandle: typeof mxHandle;
     mxVertexHandler: typeof mxVertexHandler;
     mxEdgeHandler: typeof mxEdgeHandler;
     mxElbowEdgeHandler: typeof mxElbowEdgeHandler;
@@ -129,26 +129,26 @@ declare module 'mxgraph' {
     mxTooltipHandler: typeof mxTooltipHandler;
     mxCellTracker: typeof mxCellTracker;
     mxCellHighlight: typeof mxCellHighlight;
-    mxDefaultKeyHandler: any;
-    mxDefaultPopupMenu: any;
-    mxDefaultToolbar: any;
-    mxEditor: any;
+    mxDefaultKeyHandler: typeof mxDefaultKeyHandler;
+    mxDefaultPopupMenu: typeof mxDefaultPopupMenu;
+    mxDefaultToolbar: typeof mxDefaultToolbar;
+    mxEditor: typeof mxEditor;
     mxCodecRegistry: typeof mxCodecRegistry;
     mxCodec: typeof mxCodec;
     mxObjectCodec: typeof mxObjectCodec;
-    mxCellCodec: any;
-    mxModelCodec: any;
-    mxRootChangeCodec: any;
-    mxChildChangeCodec: any;
-    mxTerminalChangeCodec: any;
-    mxGenericChangeCodec: any;
-    mxGraphCodec: any;
-    mxGraphViewCodec: any;
-    mxStylesheetCodec: any;
-    mxDefaultKeyHandlerCodec: any;
-    mxDefaultToolbarCodec: any;
-    mxDefaultPopupMenuCodec: any;
-    mxEditorCodec: any;
+    mxCellCodec: mxObjectCodec;
+    mxModelCodec: mxObjectCodec;
+    mxRootChangeCodec: mxObjectCodec;
+    mxChildChangeCodec: mxObjectCodec;
+    mxTerminalChangeCodec: mxObjectCodec;
+    mxGenericChangeCodec: typeof mxGenericChangeCodec;
+    mxGraphCodec: mxObjectCodec;
+    mxGraphViewCodec: mxObjectCodec;
+    mxStylesheetCodec: mxObjectCodec;
+    mxDefaultKeyHandlerCodec: mxObjectCodec;
+    mxDefaultToolbarCodec: mxObjectCodec;
+    mxDefaultPopupMenuCodec: mxObjectCodec;
+    mxEditorCodec: mxObjectCodec;
   }
 
   export type mxGraphOptions = {

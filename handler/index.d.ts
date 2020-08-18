@@ -7,6 +7,7 @@
 ///<reference path="./mxEdgeSegmentHandler.d.ts" />
 ///<reference path="./mxElbowEdgeHandler.d.ts" />
 ///<reference path="./mxGraphHandler.d.ts" />
+///<reference path="./mxHandle.d.ts" />
 ///<reference path="./mxKeyHandler.d.ts" />
 ///<reference path="./mxPanningHandler.d.ts" />
 ///<reference path="./mxPopupMenuHandler.d.ts" />

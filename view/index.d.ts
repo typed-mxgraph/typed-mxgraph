@@ -2,6 +2,7 @@
 /// <reference path="./mxCellOverlay.d.ts" />
 /// <reference path="./mxCellRenderer.d.ts" />
 /// <reference path="./mxCellState.d.ts" />
+/// <reference path="./mxCellStatePreview.d.ts" />
 /// <reference path="./mxConnectionConstraint.d.ts" />
 /// <reference path="./mxEdgeStyle.d.ts" />
 /// <reference path="./mxGraph.d.ts" />
