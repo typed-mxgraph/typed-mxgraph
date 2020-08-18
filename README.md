@@ -2,7 +2,7 @@ Typed mxGraph
 ====
 
 [![Build](https://github.com/typed-mxgraph/typed-mxgraph/workflows/Validation/badge.svg)](https://github.com/typed-mxgraph/typed-mxgraph/actions)
-[![npm version](https://badge.fury.io/js/%40typed-mxgraph%2Ftyped-mxgraph.svg)](https://badge.fury.io/js/%40typed-mxgraph%2Ftyped-mxgraph)
+[![npm version](https://badge.fury.io/js/%40typed-mxgraph%2Ftyped-mxgraph.svg)](https://www.npmjs.com/package/@typed-mxgraph/typed-mxgraph)
 [![GitHub license](https://img.shields.io/github/license/typed-mxgraph/typed-mxgraph)](https://github.com/typed-mxgraph/typed-mxgraph/blob/master/LICENSE)
 
 mxGraph Typescript Declarations For [Official mxGraph NPM Package][official mxgraph npm package].
