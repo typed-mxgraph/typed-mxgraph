@@ -23,6 +23,10 @@ module.exports = {
         allowTemplateLiterals: true,
       },
     ],
+    'indent': [
+      'error',
+      2,
+    ],
     'arrow-parens': [
       'warn',
       'as-needed',
