@@ -9,10 +9,17 @@ mxGraph Typescript Declarations For [Official mxGraph NPM Package][official mxgr
 
 ### Usage
 1. Add `mxgraph` and `@typed-mxgraph/typed-mxgraph` dependencies to your project:
-    ```shell
+    
+   npm:
+   ```shell
     npm install --save mxgraph
     npm install --save-dev @typed-mxgraph/typed-mxgraph
     ```
+   yarn:
+   ```shell
+   yarn add mxgraph
+   yarn add --dev @typed-mxgraph/typed-mxgraph
+   ```
 2. Update `tsconfig.json` append `node_modules/@typed-mxgraph` to `typeRoots`:
     ```json
     {
