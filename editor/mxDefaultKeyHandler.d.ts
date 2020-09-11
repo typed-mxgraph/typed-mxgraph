@@ -41,7 +41,7 @@ declare module 'mxgraph' {
      * @param action    Name of the action to execute in {@link editor}.
      * @param control   Optional boolean that specifies if control must be pressed.  Default is false.
      */
-    bindAction(code: number, action: string, control: boolean): void;
+    bindAction(code: number, action: string, control?: boolean): void;
 
     /**
      * Destroys the {@link handler} associated with this object.  This does normally not need to be called, the {@link handler} is destroyed automatically when the window unloads (in IE) by {@link mxEditor}.
