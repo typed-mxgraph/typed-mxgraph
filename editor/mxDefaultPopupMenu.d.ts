@@ -152,24 +152,23 @@ declare module 'mxgraph' {
      * @param menu - {@link mxPopupMenu} that is used for adding items and separators.
      * @param editor - Enclosing {@link mxEditor} instance.
      * @param lab - String that represents the label of the menu item.
+     * @param parent - DOM node that represents the parent menu item.
      * @param icon - Optional URL that represents the icon of the menu item.
      * @param action - Optional name of the action to execute in the given editor.
      * @param funct - Optional function to execute before the optional action. The function takes an {@link mxEditor}, the {@link mxCell} under the mouse and the mouse event that triggered the call.
      * @param cell - Optional {@link mxCell} to use as an argument for the action.
-     * @param parent - DOM node that represents the parent menu item.
      * @param iconCls - Optional CSS class for the menu icon.
-     * @param enabled - Optional boolean that specifies if the menu item is enabled.
-     * @param Default is true.
+     * @param enabled - Optional boolean that specifies if the menu item is enabled. Default is true.
      */
     addAction(
       menu: mxPopupMenu,
       editor: mxEditor,
       lab: string,
-      icon: string,
-      action: string,
-      funct: Function,
-      cell: mxCell,
       parent: HTMLElement,
+      icon?: string,
+      action?: string,
+      funct?: Function,
+      cell?: mxCell,
       iconCls?: string,
       enabled?: boolean
     ): void;
