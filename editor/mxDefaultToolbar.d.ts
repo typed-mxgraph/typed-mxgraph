@@ -198,5 +198,7 @@ declare module 'mxgraph' {
      * This does normally not need to be called, the {@link toolbar} is destroyed automatically when the window unloads (in IE) by {@link mxEditor}.
      */
     destroy(): void;
+
+    [key: string]: any;
   }
 }

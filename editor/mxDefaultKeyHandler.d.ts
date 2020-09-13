@@ -47,5 +47,7 @@ declare module 'mxgraph' {
      * Destroys the {@link handler} associated with this object.  This does normally not need to be called, the {@link handler} is destroyed automatically when the window unloads (in IE) by {@link mxEditor}.
      */
     destroy(): void;
+
+    [key: string]: any;
   }
 }

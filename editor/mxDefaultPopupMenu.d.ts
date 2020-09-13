@@ -181,5 +181,7 @@ declare module 'mxgraph' {
      * @param evt
      */
     createConditions(editor: mxEditor, cell: mxCell, evt: MouseEvent): void;
+
+    [key: string]: any;
   }
 }
