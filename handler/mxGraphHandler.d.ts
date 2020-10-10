@@ -169,6 +169,20 @@ declare module 'mxgraph' {
      */
     rotationEnabled: boolean;
 
+    /**
+     * Variable: maxLivePreview
+     *
+     * Maximum number of cells for which live preview should be used.  Default is 0 which means no live preview.
+     */
+    maxLivePreview: number;
+
+    /**
+     * Variable allowLivePreview
+     *
+     * If live preview is allowed on this system.  Default is true for systems with SVG support.
+     */
+    allowLivePreview: boolean;
+
     constructor(graph: mxGraph);
 
     /**
