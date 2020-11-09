@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "test": "tsc --noEmit",
-    "eslint": "eslint '**/*.d.ts'",
-    "prettier": "prettier --write '**/*.d.ts'",
-    "prettier:check": "prettier --check '**/*.d.ts'"
+    "eslint": "eslint \"**/*.d.ts\"",
+    "prettier": "prettier --write \"**/*.d.ts\"",
+    "prettier:check": "prettier --check \"**/*.d.ts\""
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.10.1",
