@@ -1,3 +1,4 @@
+/// <reference path="./editor/index.d.ts" />
 /// <reference path="./handler/index.d.ts" />
 /// <reference path="./io/index.d.ts" />
 /// <reference path="./layout/index.d.ts" />
