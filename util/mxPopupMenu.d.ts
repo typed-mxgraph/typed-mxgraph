@@ -128,7 +128,7 @@ declare module 'mxgraph' {
       title: string,
       image?: string,
       funct?: (me: mxMouseEvent) => void,
-      parent?: mxPopupMenu,
+      parent?: Element,
       iconCls?: string,
       enabled?: boolean,
       active?: boolean
