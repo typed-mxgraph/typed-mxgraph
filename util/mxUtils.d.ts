@@ -16,7 +16,11 @@ declare module 'mxgraph' {
      * @param key             Key whose value should be returned.
      * @param defaultValue    Value to be returned if the value for the given key is null.
      */
-    static getValue(array: Array<any>, key: any, defaultValue: any): any;
+    static getValue(
+      array: Record<string | number | symbol, any> | undefined,
+      key: string | number | symbol,
+      defaultValue: any
+    ): any;
 
     /**
      * Returns true if the specified point (x, y) is contained in the given rectangle.
