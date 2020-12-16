@@ -5,11 +5,11 @@ Typed mxGraph
 [![npm version](https://badge.fury.io/js/%40typed-mxgraph%2Ftyped-mxgraph.svg)](https://www.npmjs.com/package/@typed-mxgraph/typed-mxgraph)
 [![GitHub license](https://img.shields.io/github/license/typed-mxgraph/typed-mxgraph)](https://github.com/typed-mxgraph/typed-mxgraph/blob/master/LICENSE)
 
-mxGraph Typescript Declarations For [Official mxGraph NPM Package][official mxgraph npm package].
+mxGraph Typescript Declarations For [Official mxGraph NPM Package][mxgraph].
 
 ### Usage
 1. Add `mxgraph` and `@typed-mxgraph/typed-mxgraph` dependencies to your project:
-    
+
    npm:
    ```shell
     npm install --save mxgraph
@@ -44,5 +44,39 @@ mxGraph Typescript Declarations For [Official mxGraph NPM Package][official mxgr
     console.log(mx.mxClient.VERSION);
     ```
 
+
+### Progress
+
+The definitions currently target mxGraph `4.1.1`. See the implementation status in the following table.
+- progress: initial support
+  - not yet: no support at all
+  - partial: implementation started but some classes/fields/methods are missing
+  - completed: all classes/fields/methods should exist (fill an issue and/or provide a Pull Request if you detect an issue) but
+    - TSDoc is not fully accurate
+    - some type declaration may be wrong
+- checked: a finest review has been conducted about TSDoc, mxGraph types used by functions/methods, fields, ...
+
+| Module         | Progress  | Checked |
+|:---------------|:---------:|:-------:|
+| editor         | partial   | no      |
+| handler        | completed | no      |
+| io             | completed | no      |
+| layout         | completed | no      |
+| model          | completed | no      |
+| shape          | completed | no      |
+| util           | partial   | no      |
+| view           | partial   | no      |
+| mxClient.d.ts  | completed | no      |
+
+
+### Also See
+
+We are actively developing, if you want to be a contributor, please refer to the following links
+
+- [mxgraph-road-to-DefinitelyTyped]
+- https://github.com/jgraph/mxgraph/issues/81
+- https://github.com/DefinitelyTyped/DefinitelyTyped/issues/5317
+
+[mxgraph]: https://www.npmjs.com/package/mxgraph
 [mxgraph-type-definitions]: https://github.com/hungtcs/mxgraph-type-definitions
-[official mxgraph npm package]: https://www.npmjs.com/package/mxgraph
+[mxgraph-road-to-DefinitelyTyped]: https://github.com/process-analytics/mxgraph-road-to-DefinitelyTyped
