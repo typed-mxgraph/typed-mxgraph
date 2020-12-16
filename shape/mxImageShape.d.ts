@@ -60,6 +60,7 @@ declare module 'mxgraph' {
      * Disables inherited roundable support.
      */
     isRoundable(): boolean;
+    isRoundable(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): boolean;
 
     /**
      * Generic background painting implementation.
