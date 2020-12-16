@@ -449,7 +449,7 @@ declare module 'mxgraph' {
      * computing the label bounds as an <mxRectangle>, where the bottom and right
      * margin are defined in the width and height of the rectangle, respectively.
      */
-    getLabelMargins(rect: mxRectangle): mxRectangle;
+    getLabelMargins(rect: mxRectangle): mxRectangle | null;
 
     /**
      * Function: checkBounds
