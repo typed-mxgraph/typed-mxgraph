@@ -7,7 +7,7 @@ describe('factory', () => {
     mxgraph = factory();
   });
 
-  it('should be create', () => {
+  it('should be created', () => {
     expect(mxgraph).toBeDefined();
   });
 
