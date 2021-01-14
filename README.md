@@ -43,7 +43,44 @@ mxGraph Typescript Declarations For [Official mxGraph NPM Package][mxgraph].
     });
     console.log(mx.mxClient.VERSION);
     ```
+4. (optional) Create a helper to import mxgraph
+    ```ts
+    // src/mxgraph.ts
+    import factory from 'mxgraph';
 
+    (window as any)['mxBasePath'] = 'assets/mxgraph';
+
+    export default factory({
+      // not working see https://github.com/jgraph/mxgraph/issues/479
+      mxBasePath: 'assets/mxgraph',
+    });
+    ```
+    ```ts
+    // src/application.ts
+    import mx from './mxgraph';                       // <- import values from factory()
+    import { mxGraph, mxGraphModel } from 'mxgraph';  // <- import types only
+
+    export class Application {
+
+      constructor(container: HTMLElement) {
+        if(mx.mxClient.isBrowserSupported()) {
+          console.log('Yes! Yes!');
+        }
+
+        const graph: mxGraph = new mx.mxGraph(container);
+        const model: mxGraphModel = graph.getModel();
+        model.beginUpdate();
+        try {
+          graph.insertVertex(graph.getDefaultParent(), '', 'TEST', 0, 0, 100, 100);
+        } finally {
+          model.endUpdate();
+        }
+      }
+
+    }
+    ```
+
+Demo: https://github.com/typed-mxgraph/typed-mxgraph-demo
 
 ### Progress
 
