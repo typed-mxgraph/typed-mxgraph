@@ -82,12 +82,25 @@ mxGraph Typescript Declarations For [Official mxGraph NPM Package][mxgraph].
 
 Demo: https://github.com/typed-mxgraph/typed-mxgraph-demo
 
-### Progress
 
-The definitions currently target mxGraph `4.1.1`. See the implementation status in the following table.
+### Implementation
+
+Types have been initially created from mxGraph `4.1.0` by hand (1st hosting repository was [mxgraph-type-definitions]) and progressively updated when new mxgraph
+versions have been released.
+
+The mxgraph lib is almost fully covered by types in this project. The issues you may encounter are
+* API changes in recent mxgraph have not been reported. We haven't decided how we will manage this in the future, so for now, they are updated when user detect issues
+* Function arguments types or 'mandatoriness' may not be accurate: even by reading the JS code, it is sometimes hard to figure out what is the correct type.
+* Historically, we try to avoid `any` and use optional when we don't know.
+* We expect user to provide feedbacks by creating GitHub issues and/or Pull Requests when they notice issue with the types.
+
+
+### Implementation Progress
+
+The definitions target mxGraph `4.2.2`. See the implementation status in the following table.
 - progress: initial support
   - not yet: no support at all
-  - partial: implementation started but some classes/fields/methods are missing
+  - partial: implementation started, but some classes/fields/methods are missing
   - completed: all classes/fields/methods should exist (fill an issue and/or provide a Pull Request if you detect an issue) but
     - TSDoc is not fully accurate
     - some type declaration may be wrong
@@ -104,6 +117,11 @@ The definitions currently target mxGraph `4.1.1`. See the implementation status 
 | util           | partial   | no      |
 | view           | partial   | no      |
 | mxClient.d.ts  | completed | no      |
+
+
+### Development
+
+* converting mxGraph API documentation to TSDoc: see [regexp conversion helpers](./tsdoc-conversion-helpers.md) 
 
 
 ### Also See
