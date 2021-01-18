@@ -1,6 +1,6 @@
 {
   "name": "@typed-mxgraph/typed-mxgraph",
-  "version": "0.0.4-0",
+  "version": "0.0.6",
   "author": "鸿则 <hungtcs@163.com>",
   "license": "MIT",
   "scripts": {

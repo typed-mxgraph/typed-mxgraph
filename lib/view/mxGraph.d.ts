@@ -96,7 +96,7 @@ declare module 'mxgraph' {
     model: mxGraphModel;
 
     /**
-     * Holds the {@link mxGraphView} that caches the {@link mxCellStates} for the cells.
+     * Holds the {@link mxGraphView} that caches the {@link mxCellState}s for the cells.
      */
     view: mxGraphView;
 
@@ -131,7 +131,7 @@ declare module 'mxgraph' {
     cellRenderer: mxCellRenderer;
 
     /**
-     * An array of {@link mxMultiplicities} describing the allowed
+     * An array of {@link mxMultiplicity} describing the allowed
      * connections in a graph.
      */
     multiplicities: mxMultiplicity[];
@@ -148,42 +148,46 @@ declare module 'mxgraph' {
     dialect: mxDialectConstants;
 
     /**
-     * Specifies the grid size. Default is 10.
+     * Specifies the grid size.
+     * @default 10
      */
     gridSize: number;
 
     /**
-     * Specifies if the grid is enabled. This is used in {@link snap}. Default is
-     * true.
+     * Specifies if the grid is enabled. This is used in {@link snap}.
+     * @default true
      */
     gridEnabled: boolean;
 
     /**
      * Specifies if ports are enabled. This is used in {@link cellConnected} to update
-     * the respective style. Default is true.
+     * the respective style.
+     * @default true
      */
     portsEnabled: boolean;
 
     /**
-     * Specifies if native double click events should be detected. Default is true.
+     * Specifies if native double click events should be detected.
+     * @default true
      */
     nativeDblClickEnabled: boolean;
 
     /**
      * Specifies if double taps on touch-based devices should be handled as a
-     * double click. Default is true.
+     * double click.
+     * @default true
      */
     doubleTapEnabled: boolean;
 
     /**
-     * Specifies the timeout for double taps and non-native double clicks. Default
-     * is 500 ms.
+     * Specifies the timeout in milliseconds for double taps and non-native double clicks.
+     * @default 500
      */
     doubleTapTimeout: number;
 
     /**
-     * Specifies the tolerance for double taps and double clicks in quirks mode.
-     * Default is 25 pixels.
+     * Specifies the tolerance in pixels for double taps and double clicks in quirks mode.
+     * @default 25
      */
     doubleTapTolerance: number;
 
@@ -199,65 +203,69 @@ declare module 'mxgraph' {
 
     /**
      * Specifies if tap and hold should be used for starting connections on touch-based
-     * devices. Default is true.
+     * devices.
+     * @default true
      */
     tapAndHoldEnabled: boolean;
 
     /**
-     * Specifies the time for a tap and hold. Default is 500 ms.
+     * Specifies the time in milliseconds for a tap and hold.
+     * @default 500
      */
     tapAndHoldDelay: number;
 
     /**
-     * True if the timer for tap and hold events is running.
+     * `True` if the timer for tap and hold events is running.
      */
     tapAndHoldInProgress: boolean;
 
     /**
-     * True as long as the timer is running and the touch events
+     * `True` as long as the timer is running and the touch events
      * stay within the given {@link tapAndHoldTolerance}.
      */
     tapAndHoldValid: boolean;
 
     /**
-     * Holds the x-coordinate of the intial touch event for tap and hold.
+     * Holds the x-coordinate of the initial touch event for tap and hold.
      */
     initialTouchX: number;
 
     /**
-     * Holds the y-coordinate of the intial touch event for tap and hold.
+     * Holds the y-coordinate of the initial touch event for tap and hold.
      */
     initialTouchY: number;
 
     /**
-     * Tolerance for a move to be handled as a single click.
-     * Default is 4 pixels.
+     * Tolerance in pixels for a move to be handled as a single click.
+     * @default 4
      */
     tolerance: number;
 
     /**
      * Value returned by {@link getOverlap} if {@link isAllowOverlapParent} returns
-     * true for the given cell. {@link getOverlap} is used in {@link constrainChild} if
-     * {@link isConstrainChild} returns true. The value specifies the
+     * `true` for the given cell. {@link getOverlap} is used in {@link constrainChild} if
+     * {@link isConstrainChild} returns `true`. The value specifies the
      * portion of the child which is allowed to overlap the parent.
      */
     defaultOverlap: number;
 
     /**
      * Specifies the default parent to be used to insert new cells.
-     * This is used in {@link getDefaultParent}. Default is null.
+     * This is used in {@link getDefaultParent}.
+     * @default null
      */
     defaultParent: mxCell;
 
     /**
      * Specifies the alternate edge style to be used if the main control point
-     * on an edge is being doubleclicked. Default is null.
+     * on an edge is being double clicked.
+     * @default null
      */
     alternateEdgeStyle: string;
 
     /**
-     * Specifies the {@link mxImage} to be returned by {@link getBackgroundImage}. Default
-     * is null.
+     * Specifies the {@link mxImage} to be returned by {@link getBackgroundImage}.
+     * @default null
      *
      * @example
      * ```javascript
@@ -269,79 +277,87 @@ declare module 'mxgraph' {
     backgroundImage: mxImage;
 
     /**
-     * Specifies if the background page should be visible. Default is false.
+     * Specifies if the background page should be visible.
      * Not yet implemented.
+     * @default false
      */
     pageVisible: boolean;
 
     /**
-     * Specifies if a dashed line should be drawn between multiple pages. Default
-     * is false. If you change this value while a graph is being displayed then you
+     * Specifies if a dashed line should be drawn between multiple pages.
+     * If you change this value while a graph is being displayed then you
      * should call {@link sizeDidChange} to force an update of the display.
+     * @default false
      */
     pageBreaksVisible: boolean;
 
     /**
-     * Specifies the color for page breaks. Default is 'gray'.
+     * Specifies the color for page breaks.
+     * @default gray
      */
     pageBreakColor: string;
 
     /**
-     * Specifies the page breaks should be dashed. Default is true.
+     * Specifies the page breaks should be dashed.
+     * @default true
      */
     pageBreakDashed: boolean;
 
     /**
-     * Specifies the minimum distance for page breaks to be visible. Default is
-     * 20 (in pixels).
+     * Specifies the minimum distance in pixels for page breaks to be visible.
+     * @default 20
      */
     minPageBreakDist: number;
 
     /**
      * Specifies if the graph size should be rounded to the next page number in
      * {@link sizeDidChange}. This is only used if the graph container has scrollbars.
-     * Default is false.
+     * @default false
      */
     preferPageSize: boolean;
 
     /**
-     * Specifies the page format for the background page. Default is
-     * {@link mxConstants.PAGE_FORMAT_A4_PORTRAIT}. This is used as the default in
-     * {@link mxPrintPreview} and for painting the background page if {@link pageVisible} is
-     * true and the pagebreaks if {@link pageBreaksVisible} is true.
+     * Specifies the page format for the background page.
+     * This is used as the default in {@link mxPrintPreview} and for painting the background page
+     * if {@link pageVisible} is `true` and the page breaks if {@link pageBreaksVisible} is `true`.
+     * @default {@link mxConstants.PAGE_FORMAT_A4_PORTRAIT}
      */
     pageFormat: mxRectangle;
 
     /**
-     * Specifies the scale of the background page. Default is 1.5.
+     * Specifies the scale of the background page.
      * Not yet implemented.
+     * @default 1.5
      */
     pageScale: number;
 
     /**
-     * Specifies the return value for {@link isEnabled}. Default is true.
+     * Specifies the return value for {@link isEnabled}.
+     * @default true
      */
     enabled: boolean;
 
     /**
      * Specifies if {@link mxKeyHandler} should invoke {@link escape} when the escape key
-     * is pressed. Default is true.
+     * is pressed.
+     * @default true
      */
     escapeEnabled: boolean;
 
     /**
-     * If true, when editing is to be stopped by way of selection changing,
+     * If `true`, when editing is to be stopped by way of selection changing,
      * data in diagram changing or other means stopCellEditing is invoked, and
      * changes are saved. This is implemented in a focus handler in
-     * {@link mxCellEditor}. Default is true.
+     * {@link mxCellEditor}.
+     * @default true
      */
     invokesStopCellEditing: boolean;
 
     /**
-     * If true, pressing the enter key without pressing control or shift will stop
+     * If `true`, pressing the enter key without pressing control or shift will stop
      * editing and accept the new value. This is used in {@link mxCellEditor} to stop
      * cell editing. Note: You can always use F2 and escape to stop editing.
-     * Default is false.
+     * @default false
      */
     enterStopsCellEditing: boolean;
 
@@ -349,112 +365,132 @@ declare module 'mxgraph' {
      * Specifies if scrollbars should be used for panning in {@link panGraph} if
      * any scrollbars are available. If scrollbars are enabled in CSS, but no
      * scrollbars appear because the graph is smaller than the container size,
-     * then no panning occurs if this is true. Default is true.
+     * then no panning occurs if this is `true`.
+     * @default true
      */
     useScrollbarsForPanning: boolean;
 
     /**
-     * Specifies the return value for {@link canExportCell}. Default is true.
+     * Specifies the return value for {@link canExportCell}.
+     * @default true
      */
     exportEnabled: boolean;
 
     /**
-     * Specifies the return value for {@link canImportCell}. Default is true.
+     * Specifies the return value for {@link canImportCell}.
+     * @default true
      */
     importEnabled: boolean;
 
     /**
-     * Specifies the return value for {@link isCellLocked}. Default is false.
+     * Specifies the return value for {@link isCellLocked}.
+     * @default false
      */
     cellsLocked: boolean;
 
     /**
-     * Specifies the return value for {@link isCellCloneable}. Default is true.
+     * Specifies the return value for {@link isCellCloneable}.
+     * @default true
      */
     cellsCloneable: boolean;
 
     /**
      * Specifies if folding (collapse and expand via an image icon in the graph
-     * should be enabled). Default is true.
+     * should be enabled).
+     * @default true
      */
     foldingEnabled: boolean;
 
     /**
-     * Specifies the return value for {@link isCellEditable}. Default is true.
+     * Specifies the return value for {@link isCellEditable}.
+     * @default true
      */
     cellsEditable: boolean;
 
     /**
-     * Specifies the return value for {@link isCellDeletable}. Default is true.
+     * Specifies the return value for {@link isCellDeletable}.
+     * @default true
      */
     cellsDeletable: boolean;
 
     /**
-     * Specifies the return value for {@link isCellMovable}. Default is true.
+     * Specifies the return value for {@link isCellMovable}.
+     * @default true
      */
     cellsMovable: boolean;
 
     /**
-     * Specifies the return value for edges in {@link isLabelMovable}. Default is true.
+     * Specifies the return value for edges in {@link isLabelMovable}.
+     * @default true
      */
     edgeLabelsMovable: boolean;
 
     /**
-     * Specifies the return value for vertices in {@link isLabelMovable}. Default is false.
+     * Specifies the return value for vertices in {@link isLabelMovable}.
+     * @default false
      */
     vertexLabelsMovable: boolean;
 
     /**
-     * Specifies the return value for {@link isDropEnabled}. Default is false.
+     * Specifies the return value for {@link isDropEnabled}.
+     * @default false
      */
     dropEnabled: boolean;
 
     /**
      * Specifies if dropping onto edges should be enabled. This is ignored if
-     * {@link dropEnabled} is false. If enabled, it will call {@link splitEdge} to carry
-     * out the drop operation. Default is true.
+     * {@link dropEnabled} is `false`. If enabled, it will call {@link splitEdge} to carry
+     * out the drop operation.
+     * @default true
      */
     splitEnabled: boolean;
 
     /**
-     * Specifies the return value for {@link isCellResizable}. Default is true.
+     * Specifies the return value for {@link isCellsResizable}.
+     * @default true
      */
     cellsResizable: boolean;
 
     /**
-     * Specifies the return value for {@link isCellsBendable}. Default is true.
+     * Specifies the return value for {@link isCellsBendable}.
+     * @default true
      */
     cellsBendable: boolean;
 
     /**
-     * Specifies the return value for {@link isCellSelectable}. Default is true.
+     * Specifies the return value for {@link isCellsSelectable}.
+     * @default true
      */
     cellsSelectable: boolean;
 
     /**
-     * Specifies the return value for {@link isCellDisconntable}. Default is true.
+     * Specifies the return value for {@link isCellsDisconnectable}.
+     * @default true
      */
     cellsDisconnectable: boolean;
 
     /**
      * Specifies if the graph should automatically update the cell size after an
-     * edit. This is used in {@link isAutoSizeCell}. Default is false.
+     * edit. This is used in {@link isAutoSizeCell}.
+     * @default false
      */
     autoSizeCells: boolean;
 
     /**
-     * Specifies if autoSize style should be applied when cells are added. Default is false.
+     * Specifies if autoSize style should be applied when cells are added.
+     * @default false
      */
     autoSizeCellsOnAdd: boolean;
 
     /**
      * Specifies if the graph should automatically scroll if the mouse goes near
      * the container edge while dragging. This is only taken into account if the
-     * container has scrollbars. Default is true.
+     * container has scrollbars.
      *
      * If you need this to work without scrollbars then set {@link ignoreScrollbars} to
      * true. Please consult the {@link ignoreScrollbars} for details. In general, with
      * no scrollbars, the use of {@link allowAutoPanning} is recommended.
+     * @default true
      */
     autoScroll: boolean;
 
@@ -462,7 +498,7 @@ declare module 'mxgraph' {
      * Specifies if the graph should automatically scroll regardless of the
      * scrollbars. This will scroll the container using positive values for
      * scroll positions (ie usually only rightwards and downwards). To avoid
-     * possible conflicts with panning, set {@link translateToScrollPosition} to true.
+     * possible conflicts with panning, set {@link translateToScrollPosition} to `true`.
      */
     ignoreScrollbars: boolean;
 
@@ -479,7 +515,8 @@ declare module 'mxgraph' {
      * if the container has scrollbars. This disables {@link scrollPointToVisible} and
      * uses {@link mxPanningManager} instead. If this is true then {@link autoExtend} is
      * disabled. It should only be used with a scroll buffer or when scollbars
-     * are visible and scrollable in all directions. Default is false.
+     * are visible and scrollable in all directions.
+     * @default false
      */
     timerAutoScroll: boolean;
 
@@ -487,196 +524,220 @@ declare module 'mxgraph' {
      * Specifies if panning via {@link panGraph} should be allowed to implement autoscroll
      * if no scrollbars are available in {@link scrollPointToVisible}. To enable panning
      * inside the container, near the edge, set {@link mxPanningManager.border} to a
-     * positive value. Default is false.
+     * positive value.
+     * @default false
      */
     allowAutoPanning: boolean;
 
     /**
      * Specifies if the size of the graph should be automatically extended if the
      * mouse goes near the container edge while dragging. This is only taken into
-     * account if the container has scrollbars. Default is true. See {@link autoScroll}.
+     * account if the container has scrollbars. See {@link autoScroll}.
+     * @default true
      */
     autoExtend: boolean;
 
     /**
      * {@link mxRectangle} that specifies the area in which all cells in the diagram
      * should be placed. Uses in {@link getMaximumGraphBounds}. Use a width or height of
-     * 0 if you only want to give a upper, left corner.
+     * `0` if you only want to give a upper, left corner.
      */
     maximumGraphBounds: mxRectangle;
 
     /**
      * {@link mxRectangle} that specifies the minimum size of the graph. This is ignored
-     * if the graph container has no scrollbars. Default is null.
+     * if the graph container has no scrollbars.
+     * @default null
      */
     minimumGraphSize: mxRectangle;
 
     /**
      * {@link mxRectangle} that specifies the minimum size of the {@link container} if
-     * {@link resizeContainer} is true.
+     * {@link resizeContainer} is `true`.
      */
     minimumContainerSize: mxRectangle;
 
     /**
      * {@link mxRectangle} that specifies the maximum size of the container if
-     * {@link resizeContainer} is true.
+     * {@link resizeContainer} is `true`.
      */
     maximumContainerSize: mxRectangle;
 
     /**
      * Specifies if the container should be resized to the graph size when
-     * the graph size has changed. Default is false.
+     * the graph size has changed.
+     * @default false
      */
     resizeContainer: boolean;
 
     /**
      * Border to be added to the bottom and right side when the container is
-     * being resized after the graph has been changed. Default is 0.
+     * being resized after the graph has been changed.
+     * @default 0
      */
     border: number;
 
     /**
      * Specifies if edges should appear in the foreground regardless of their order
      * in the model. If {@link keepEdgesInForeground} and {@link keepEdgesInBackground} are
-     * both true then the normal order is applied. Default is false.
+     * both `true` then the normal order is applied.
+     * @default false
      */
     keepEdgesInForeground: boolean;
 
     /**
      * Specifies if edges should appear in the background regardless of their order
      * in the model. If {@link keepEdgesInForeground} and {@link keepEdgesInBackground} are
-     * both true then the normal order is applied. Default is false.
+     * both `true` then the normal order is applied.
+     * @default false
      */
     keepEdgesInBackground: boolean;
 
     /**
-     * Specifies if negative coordinates for vertices are allowed. Default is true.
+     * Specifies if negative coordinates for vertices are allowed.
+     * @default true
      */
     allowNegativeCoordinates: boolean;
 
     /**
      * Specifies if a child should be constrained inside the parent bounds after a
-     * move or resize of the child. Default is true.
+     * move or resize of the child.
+     * @default true
      */
     constrainChildren: boolean;
 
     /**
      * Specifies if child cells with relative geometries should be constrained
-     * inside the parent bounds, if {@link constrainChildren} is true, and/or the
-     * {@link maximumGraphBounds}. Default is false.
+     * inside the parent bounds, if {@link constrainChildren} is `true`, and/or the
+     * {@link maximumGraphBounds}.
+     * @default false
      */
     constrainRelativeChildren: boolean;
 
     /**
      * Specifies if a parent should contain the child bounds after a resize of
-     * the child. Default is true. This has precedence over {@link constrainChildren}.
+     * the child. This has precedence over {@link constrainChildren}.
+     * @default true
      */
     extendParents: boolean;
 
     /**
      * Specifies if parents should be extended according to the {@link extendParents}
-     * switch if cells are added. Default is true.
+     * switch if cells are added.
+     * @default true
      */
     extendParentsOnAdd: boolean;
 
     /**
      * Specifies if parents should be extended according to the {@link extendParents}
-     * switch if cells are added. Default is false for backwards compatiblity.
+     * switch if cells are added.
+     * @default false (for backwards compatibility)
      */
     extendParentsOnMove: boolean;
 
     /**
-     * Specifies the return value for {@link isRecursiveResize}. Default is
-     * false for backwards compatiblity.
+     * Specifies the return value for {@link isRecursiveResize}.
+     * @default false (for backwards compatibility)
      */
     recursiveResize: boolean;
 
     /**
      * Specifies if the cell size should be changed to the preferred size when
-     * a cell is first collapsed. Default is true.
+     * a cell is first collapsed.
+     * @default true
      */
     collapseToPreferredSize: boolean;
 
     /**
-     * Specifies the factor used for {@link zoomIn} and {@link zoomOut}. Default is 1.2
-     * (120%).
+     * Specifies the factor used for {@link zoomIn} and {@link zoomOut}.
+     * @default 1.2 (120%)
      */
     zoomFactor: number;
 
     /**
-     * Specifies if the viewport should automatically contain the selection cells
-     * after a zoom operation. Default is false.
+     * Specifies if the viewport should automatically contain the selection cells after a zoom operation.
+     * @default false
      */
     keepSelectionVisibleOnZoom: boolean;
 
     /**
      * Specifies if the zoom operations should go into the center of the actual
-     * diagram rather than going from top, left. Default is true.
+     * diagram rather than going from top, left.
+     * @default true
      */
     centerZoom: boolean;
 
     /**
      * Specifies if the scale and translate should be reset if the root changes in
-     * the model. Default is true.
+     * the model.
+     * @default true
      */
     resetViewOnRootChange: boolean;
 
     /**
      * Specifies if edge control points should be reset after the resize of a
-     * connected cell. Default is false.
+     * connected cell.
+     * @default false
      */
     resetEdgesOnResize: boolean;
 
     /**
      * Specifies if edge control points should be reset after the move of a
-     * connected cell. Default is false.
+     * connected cell.
+     * @default false
      */
     resetEdgesOnMove: boolean;
 
     /**
      * Specifies if edge control points should be reset after the the edge has been
-     * reconnected. Default is true.
+     * reconnected.
+     * @default true
      */
     resetEdgesOnConnect: boolean;
 
     /**
-     * Specifies if loops (aka self-references) are allowed. Default is false.
+     * Specifies if loops (aka self-references) are allowed.
+     * @default false
      */
     allowLoops: boolean;
 
     /**
      * {@link mxEdgeStyle} to be used for loops. This is a fallback for loops if the
-     * {@link mxConstants.STYLE_LOOP} is undefined. Default is {@link mxEdgeStyle.Loop}.
+     * {@link mxConstants.STYLE_LOOP} is undefined.
+     * @default {@link mxEdgeStyle.Loop}
      */
     defaultLoopStyle: any;
 
     /**
      * Specifies if multiple edges in the same direction between the same pair of
-     * vertices are allowed. Default is true.
+     * vertices are allowed.
+     * @default true
      */
     multigraph: boolean;
 
     /**
-     * Specifies if edges are connectable. Default is false. This overrides the
-     * connectable field in edges.
+     * Specifies if edges are connectable. This overrides the connectable field in edges.
+     * @default false
      */
     connectableEdges: boolean;
 
     /**
      * Specifies if edges with disconnected terminals are allowed in the graph.
-     * Default is true.
+     * @default true
      */
     allowDanglingEdges: boolean;
 
     /**
      * Specifies if edges that are cloned should be validated and only inserted
-     * if they are valid. Default is true.
+     * if they are valid.
+     * @default true
      */
     cloneInvalidEdges: boolean;
 
     /**
      * Specifies if edges should be disconnected from their terminals when they
-     * are moved. Default is true.
+     * are moved.
+     * @default true
      */
     disconnectOnMove: boolean;
 
@@ -687,24 +748,28 @@ declare module 'mxgraph' {
     labelsVisible: boolean;
 
     /**
-     * Specifies the return value for {@link isHtmlLabel}. Default is false.
+     * Specifies the return value for {@link isHtmlLabel}.
+     * @default false
      */
     htmlLabels: boolean;
 
     /**
      * Specifies if swimlanes should be selectable via the content if the
-     * mouse is released. Default is true.
+     * mouse is released.
+     * @default true
      */
     swimlaneSelectionEnabled: boolean;
 
     /**
-     * Specifies if nesting of swimlanes is allowed. Default is true.
+     * Specifies if nesting of swimlanes is allowed.
+     * @default true
      */
     swimlaneNesting: boolean;
 
     /**
      * The attribute used to find the color for the indicator if the indicator
-     * color is set to 'swimlane'. Default is {@link mxConstants.STYLE_FILLCOLOR}.
+     * color is set to 'swimlane'.
+     * @default {@link mxConstants.STYLE_FILLCOLOR}
      */
     swimlaneIndicatorColorAttribute: string;
 
@@ -714,24 +779,26 @@ declare module 'mxgraph' {
     imageBundles: mxImageBundle[];
 
     /**
-     * Specifies the minimum scale to be applied in {@link fit}. Default is 0.1. Set this
-     * to null to allow any value.
+     * Specifies the minimum scale to be applied in {@link fit}. Set this to `null` to allow any value.
+     * @default 0.1
      */
     minFitScale: number;
 
     /**
-     * Specifies the maximum scale to be applied in {@link fit}. Default is 8. Set this
-     * to null to allow any value.
+     * Specifies the maximum scale to be applied in {@link fit}. Set this to `null` to allow any value.
+     * @default 8
      */
     maxFitScale: number;
 
     /**
-     * Current horizontal panning value. Default is 0.
+     * Current horizontal panning value.
+     * @default 0
      */
     panDx: number;
 
     /**
-     * Current vertical panning value. Default is 0.
+     * Current vertical panning value.
+     * @default 0
      */
     panDy: number;
 
@@ -759,7 +826,7 @@ declare module 'mxgraph' {
      * Specifies the resource key for the error message to be displayed in
      * non-multigraphs when two vertices are already connected. If the resource
      * for this key does not exist then the value is used as the error message.
-     * Default is 'alreadyConnected'.
+     * @default 'alreadyConnected'
      */
     alreadyConnectedResource: string;
 
@@ -767,14 +834,15 @@ declare module 'mxgraph' {
      * Specifies the resource key for the warning message to be displayed when
      * a collapsed cell contains validation errors. If the resource for this
      * key does not exist then the value is used as the warning message.
-     * Default is 'containsValidationErrors'.
+     * @default 'containsValidationErrors'
      */
     containsValidationErrorsResource: string;
 
     /**
      * Specifies the resource key for the tooltip on the collapse/expand icon.
      * If the resource for this key does not exist then the value is used as
-     * the tooltip. Default is 'collapse-expand'.
+     * the tooltip.
+     * @default 'collapse-expand'
      */
     collapseExpandResource: string;
 
@@ -996,7 +1064,7 @@ declare module 'mxgraph' {
      * @param img Optional {@link mxImage} to be used for the overlay. Default is
      * {@link warningImage}.
      * @param isSelect Optional boolean indicating if a click on the overlay
-     * should select the corresponding cell. Default is false.
+     * should select the corresponding cell. Default is `false`.
      */
     setCellWarning(cell: mxCell, warning: string, img?: mxImage, isSelect?: boolean): mxCellOverlay;
 
@@ -1218,14 +1286,14 @@ declare module 'mxgraph' {
      *
      * @param border Optional number that specifies the border. Default is {@link border}.
      * @param keepOrigin Optional boolean that specifies if the translate should be
-     * changed. Default is false.
-     * @param margin Optional margin in pixels. Default is 0.
+     * changed. Default is `false`.
+     * @param margin Optional margin in pixels. Default is `0`.
      * @param enabled Optional boolean that specifies if the scale should be set or
-     * just returned. Default is true.
+     * just returned. Default is `true`.
      * @param ignoreWidth Optional boolean that specifies if the width should be
-     * ignored. Default is false.
+     * ignored. Default is `false`.
      * @param ignoreHeight Optional boolean that specifies if the height should be
-     * ignored. Default is false.
+     * ignored. Default is `false`.
      * @param maxHeight Optional maximum height.
      */
     fit(
@@ -1306,7 +1374,7 @@ declare module 'mxgraph' {
      *
      * @param key String representing the key for the boolean value to be toggled.
      * @param defaultValue Optional boolean default value if no value is defined.
-     * Default is false.
+     * Default is `false`.
      * @param cell Optional {@link mxCell} whose style should be modified. Default is
      * the selection cell.
      */
@@ -1322,7 +1390,7 @@ declare module 'mxgraph' {
      *
      * @param key String representing the key for the boolean value to be toggled.
      * @param defaultValue Optional boolean default value if no value is defined.
-     * Default is false.
+     * Default is `false`.
      * @param cells Optional array of {@link mxCell} whose styles should be modified.
      * Default is the selection cells.
      */
@@ -1454,11 +1522,11 @@ declare module 'mxgraph' {
      * new group. A group is only created if there is at least one entry in the
      * given array of cells.
      *
-     * @param group {@link mxCell} that represents the target group. If null is specified
+     * @param group {@link mxCell} that represents the target group. If `null` is specified
      * then a new group is created using {@link createGroupCell}.
      * @param border Optional integer that specifies the border between the child
-     * area and the group bounds. Default is 0.
-     * @param cells Optional array of {@link mxCell} to be grouped. If null is specified
+     * area and the group bounds. Default is `0`.
+     * @param cells Optional array of {@link mxCell} to be grouped. If `null` is specified
      * then the selection cells are used.
      */
     groupCells(group: mxCell | null, border?: number, cells?: mxCell[]): mxCell;
@@ -1525,13 +1593,13 @@ declare module 'mxgraph' {
      *
      * @param cells The groups whose bounds should be updated. If this is null, then
      * the selection cells are used.
-     * @param border Optional border to be added in the group. Default is 0.
+     * @param border Optional border to be added in the group. Default is `0`.
      * @param moveGroup Optional boolean that allows the group to be moved. Default
      * is false.
-     * @param topBorder Optional top border to be added in the group. Default is 0.
-     * @param rightBorder Optional top border to be added in the group. Default is 0.
-     * @param bottomBorder Optional top border to be added in the group. Default is 0.
-     * @param leftBorder Optional top border to be added in the group. Default is 0.
+     * @param topBorder Optional top border to be added in the group. Default is `0`.
+     * @param rightBorder Optional top border to be added in the group. Default is `0`.
+     * @param bottomBorder Optional top border to be added in the group. Default is `0`.
+     * @param leftBorder Optional top border to be added in the group. Default is `0`.
      */
     updateGroupBounds(
       cells: mxCell[],
@@ -1556,12 +1624,12 @@ declare module 'mxgraph' {
      *
      * @param cell {@link mxCell} to be cloned.
      * @param allowInvalidEdges Optional boolean that specifies if invalid edges
-     * should be cloned. Default is true.
+     * should be cloned. Default is `true`.
      * @param mapping Optional mapping for existing clones.
      * @param keepPosition Optional boolean indicating if the position of the cells should
-     * be updated to reflect the lost parent cell. Default is false.
+     * be updated to reflect the lost parent cell. Default is `false`.
      */
-    cloneCells(cells: mxCell[], allowInvalidEdges?: boolean, mapping?: any, keepPosition?: boolean): mxCell[];
+    cloneCell(cell: mxCell, allowInvalidEdges?: boolean, mapping?: any, keepPosition?: boolean): mxCell[];
 
     /**
      * Returns the clones for the given cells. The clones are created recursively
@@ -1571,12 +1639,12 @@ declare module 'mxgraph' {
      *
      * @param cells Array of {@link mxCell} to be cloned.
      * @param allowInvalidEdges Optional boolean that specifies if invalid edges
-     * should be cloned. Default is true.
+     * should be cloned. Default is `true`.
      * @param mapping Optional mapping for existing clones.
      * @param keepPosition Optional boolean indicating if the position of the cells should
-     * be updated to reflect the lost parent cell. Default is false.
+     * be updated to reflect the lost parent cell. Default is `false`.
      */
-    cloneCells(cells: mxCell[], allowInvalidEdges?: boolean, mapping?: any): mxCell[];
+    cloneCells(cells: mxCell[], allowInvalidEdges?: boolean, mapping?: any, keepPosition?: boolean): mxCell[];
 
     /**
      * Adds a new vertex into the given parent {@link mxCell} using value as the user
@@ -1613,11 +1681,11 @@ declare module 'mxgraph' {
      * @param height Integer that defines the height of the vertex.
      * @param style Optional string that defines the cell style.
      * @param relative Optional boolean that specifies if the geometry is relative.
-     * Default is false.
+     * Default is `false`.
      */
     insertVertex(
       parent: mxCell,
-      id: string,
+      id: string | null,
       value: any,
       x: number,
       y: number,
@@ -1632,7 +1700,7 @@ declare module 'mxgraph' {
      */
     createVertex(
       parent: mxCell,
-      id: string,
+      id: string | null,
       value: any,
       x: number,
       y: number,
@@ -1655,7 +1723,7 @@ declare module 'mxgraph' {
      * @param target {@link mxCell} that defines the target of the edge.
      * @param style Optional string that defines the cell style.
      */
-    insertEdge(parent: mxCell, id: string, value: any, source: mxCell, target: mxCell, style?: string): mxCell;
+    insertEdge(parent: mxCell, id: string | null, value: any, source: mxCell, target: mxCell, style?: string): mxCell;
 
     /**
      * Hook method that creates the new edge for {@link insertEdge}. This
@@ -1663,7 +1731,7 @@ declare module 'mxgraph' {
      * are set when the edge is added to the model.
      *
      */
-    createEdge(parent: mxCell, id: string, value: any, source: mxCell, target: mxCell, style?: string): mxCell;
+    createEdge(parent: mxCell, id: string | null, value: any, source: mxCell, target: mxCell, style?: string): mxCell;
 
     /**
      * Adds the edge to the parent and connects it to the given source and
@@ -1675,9 +1743,9 @@ declare module 'mxgraph' {
      * given then the default parent is used.
      * @param source Optional {@link mxCell} that represents the source terminal.
      * @param target Optional {@link mxCell} that represents the target terminal.
-     * @param index Optional index to insert the cells at. Default is to append.
+     * @param index Optional index to insert the cells at. Default is 'to append'.
      */
-    addEdge(edge: mxCell, parent: mxCell, source?: mxCell, target?: mxCell, index?: number): mxCell;
+    addEdge(edge: mxCell, parent?: mxCell, source?: mxCell, target?: mxCell, index?: number): mxCell;
 
     /**
      * Adds the cell to the parent and connects it to the given source and
@@ -1687,7 +1755,7 @@ declare module 'mxgraph' {
      * @param cell {@link mxCell} to be inserted into the given parent.
      * @param parent {@link mxCell} that represents the new parent. If no parent is
      * given then the default parent is used.
-     * @param index Optional index to insert the cells at. Default is to append.
+     * @param index Optional index to insert the cells at. Default is 'to append'.
      * @param source Optional {@link mxCell} that represents the source terminal.
      * @param target Optional {@link mxCell} that represents the target terminal.
      */
@@ -1702,13 +1770,20 @@ declare module 'mxgraph' {
      * @param cells Array of {@link mxCell} to be inserted.
      * @param parent {@link mxCell} that represents the new parent. If no parent is
      * given then the default parent is used.
-     * @param index Optional index to insert the cells at. Default is to append.
+     * @param index Optional index to insert the cells at. Default is 'to append'.
      * @param source Optional source {@link mxCell} for all inserted cells.
      * @param target Optional target {@link mxCell} for all inserted cells.
      * @param absolute Optional boolean indicating of cells should be kept at
-     * their absolute position. Default is false.
+     * their absolute position. Default is `false`.
      */
-    addCells(cells: mxCell[], parent?: mxCell, index?: number, source?: mxCell, target?: mxCell): mxCell[];
+    addCells(
+      cells: mxCell[],
+      parent?: mxCell,
+      index?: number,
+      source?: mxCell,
+      target?: mxCell,
+      absolute?: boolean
+    ): mxCell[];
 
     /**
      * Adds the specified cells to the given parent. This method fires
@@ -1730,7 +1805,7 @@ declare module 'mxgraph' {
      *
      * @param cell {@link mxCell} to be resized.
      * @param recurse Optional boolean which specifies if all descendants should be
-     * autosized. Default is true.
+     * autosized. Default is `true`.
      */
     autoSizeCell(cell: mxCell, recurse?: boolean): void;
 
@@ -1743,9 +1818,9 @@ declare module 'mxgraph' {
      * @param cells Array of {@link mxCell} to remove. If null is specified then the
      * selection cells which are deletable are used.
      * @param includeEdges Optional boolean which specifies if all connected edges
-     * should be removed as well. Default is true.
+     * should be removed as well. Default is `true`.
      */
-    removeCells(cells: mxCell[], includeEdges: boolean): mxCell[];
+    removeCells(cells: mxCell[], includeEdges?: boolean): mxCell[];
 
     /**
      * Removes the given cells from the model. This method fires
@@ -1796,7 +1871,7 @@ declare module 'mxgraph' {
      * @param cells Array of {@link mxCell} whose visible state should be changed. If
      * null is specified then the selection cells are used.
      * @param includeEdges Optional boolean indicating if the visible state of all
-     * connected edges should be changed as well. Default is true.
+     * connected edges should be changed as well. Default is `true`.
      */
     toggleCells(show: boolean, cells: mxCell[], includeEdges: boolean): mxCell[];
 
@@ -1818,13 +1893,13 @@ declare module 'mxgraph' {
      * This method fires {@link mxEvent.FOLD_CELLS} while the transaction is in
      * progress. Returns the cells whose collapsed state was changed.
      *
-     * @param collapsed Boolean indicating the collapsed state to be assigned.
+     * @param collapse Boolean indicating the collapsed state to be assigned.
      * @param recurse Optional boolean indicating if the collapsed state of all
-     * descendants should be set. Default is false.
+     * descendants should be set. Default is `false`.
      * @param cells Array of {@link mxCell} whose collapsed state should be set. If
      * null is specified then the foldable selection cells are used.
      * @param checkFoldable Optional boolean indicating of isCellFoldable should be
-     * checked. Default is false.
+     * checked. Default is `false`.
      * @param evt Optional native event that triggered the invocation.
      */
     foldCells(collapse: boolean, recurse: boolean, cells: mxCell[], checkFoldable?: boolean, evt?: Event): mxCell[];
@@ -1835,11 +1910,11 @@ declare module 'mxgraph' {
      * cells whose collapsed state was changed.
      *
      * @param cells Array of {@link mxCell} whose collapsed state should be set.
-     * @param collapsed Boolean indicating the collapsed state to be assigned.
+     * @param collapse Boolean indicating the collapsed state to be assigned.
      * @param recurse Boolean indicating if the collapsed state of all descendants
      * should be set.
      * @param checkFoldable Optional boolean indicating of isCellFoldable should be
-     * checked. Default is false.
+     * checked. Default is `false`.
      */
     cellsFolded(cells: mxCell[], collapse: boolean, recurse: boolean, checkFoldable?: boolean): void;
 
@@ -2043,8 +2118,8 @@ declare module 'mxgraph' {
      * cells are inserted via datatransfer.
      *
      * @param cells Array of {@link mxCell} to be imported.
-     * @param dx Integer that specifies the x-coordinate of the vector. Default is 0.
-     * @param dy Integer that specifies the y-coordinate of the vector. Default is 0.
+     * @param dx Integer that specifies the x-coordinate of the vector. Default is `0`.
+     * @param dy Integer that specifies the y-coordinate of the vector. Default is `0`.
      * @param target {@link mxCell} that represents the new parent of the cells.
      * @param evt Mouseevent that triggered the invocation.
      * @param mapping Optional mapping for existing clones.
@@ -2065,9 +2140,9 @@ declare module 'mxgraph' {
      * ```
      *
      * @param cells Array of {@link mxCell} to be moved, cloned or added to the target.
-     * @param dx Integer that specifies the x-coordinate of the vector. Default is 0.
-     * @param dy Integer that specifies the y-coordinate of the vector. Default is 0.
-     * @param clone Boolean indicating if the cells should be cloned. Default is false.
+     * @param dx Integer that specifies the x-coordinate of the vector. Default is `0`.
+     * @param dy Integer that specifies the y-coordinate of the vector. Default is `0`.
+     * @param clone Boolean indicating if the cells should be cloned. Default is `false`.
      * @param target {@link mxCell} that represents the new parent of the cells.
      * @param evt Mouseevent that triggered the invocation.
      * @param mapping Optional mapping for existing clones.
@@ -2121,8 +2196,8 @@ declare module 'mxgraph' {
      * {@link getOverlap} and {@link isConstrainChild}. This modifies the cell's geometry
      * in-place and does not clone it.
      *
-     * @param cells {@link mxCell} which should be constrained.
-     * @param sizeFirst Specifies if the size should be changed first. Default is true.
+     * @param cell {@link mxCell} which should be constrained.
+     * @param sizeFirst Specifies if the size should be changed first. Default is `true`.
      */
     constrainChild(cell: mxCell, sizeFirst?: boolean): void;
 
@@ -2357,10 +2432,10 @@ declare module 'mxgraph' {
      * {@link mxGraphView.getBounds} for arrays.
      *
      * @param cell {@link mxCell} whose bounds should be returned.
-     * @param includeEdge Optional boolean that specifies if the bounds of
-     * the connected edges should be included. Default is false.
+     * @param includeEdges Optional boolean that specifies if the bounds of
+     * the connected edges should be included. Default is `false`.
      * @param includeDescendants Optional boolean that specifies if the bounds
-     * of all descendants should be included. Default is false.
+     * of all descendants should be included. Default is `false`.
      */
     getCellBounds(cell: mxCell, includeEdges?: boolean, includeDescendants?: boolean): mxRectangle;
 
@@ -2394,7 +2469,7 @@ declare module 'mxgraph' {
      *
      * @param cells Array of {@link mxCell} whose bounds should be returned.
      * @param includeEdges Specifies if edge bounds should be included by computing
-     * the bounding box for all points in geometry. Default is false.
+     * the bounding box for all points in geometry. Default is `false`.
      */
     getBoundingBoxFromGeometry(cells: mxCell[], includeEdges?: boolean): mxRectangle;
 
@@ -2460,11 +2535,11 @@ declare module 'mxgraph' {
      * Centers the graph in the container.
      *
      * @param horizontal Optional boolean that specifies if the graph should be centered
-     * horizontally. Default is true.
+     * horizontally. Default is `true`.
      * @param vertical Optional boolean that specifies if the graph should be centered
-     * vertically. Default is true.
-     * @param cx Optional float that specifies the horizontal center. Default is 0.5.
-     * @param cy Optional float that specifies the vertical center. Default is 0.5.
+     * vertically. Default is `true`.
+     * @param cx Optional float that specifies the horizontal center. Default is `0.5`.
+     * @param cy Optional float that specifies the vertical center. Default is `0.5`.
      */
     center(horizontal?: boolean, vertical?: boolean, cx?: number, cy?: number): void;
 
@@ -2500,7 +2575,7 @@ declare module 'mxgraph' {
      * [/code]
      *
      * @param cell {@link mxCell} to be made visible.
-     * @param center Optional boolean flag. Default is false.
+     * @param center Optional boolean flag. Default is `false`.
      */
     scrollCellToVisible(cell: mxCell, center?: boolean): void;
 
@@ -3915,9 +3990,9 @@ declare module 'mxgraph' {
      * @param parent {@link mxCell} that should be used as the root of the recursion.
      * Default is current root of the view or the root of the model.
      * @param vertices Optional boolean indicating if vertices should be returned.
-     * Default is true.
+     * Default is `true`.
      * @param edges Optional boolean indicating if edges should be returned. Default
-     * is true.
+     * is `true`.
      * @param ignoreFn Optional function that returns true if cell should be ignored.
      * The function is passed the cell state and the x and y parameter.
      */
@@ -3963,9 +4038,9 @@ declare module 'mxgraph' {
      *
      * @param parent {@link mxCell} whose children should be returned.
      * @param vertices Optional boolean that specifies if child vertices should
-     * be returned. Default is false.
+     * be returned. Default is `false`.
      * @param edges Optional boolean that specifies if child edges should
-     * be returned. Default is false.
+     * be returned. Default is `false`.
      */
     getChildCells(parent: mxCell, vertices?: boolean, edges?: boolean): mxCell[];
 
@@ -4011,11 +4086,11 @@ declare module 'mxgraph' {
      * @param parent Optional parent of the opposite end for an edge to be
      * returned.
      * @param incoming Optional boolean that specifies if incoming edges should
-     * be included in the result. Default is true.
+     * be included in the result. Default is `true`.
      * @param outgoing Optional boolean that specifies if outgoing edges should
-     * be included in the result. Default is true.
+     * be included in the result. Default is `true`.
      * @param includeLoops Optional boolean that specifies if loops should be
-     * included in the result. Default is true.
+     * included in the result. Default is `true`.
      * @param recurse Optional boolean the specifies if the parent specified only
      * need be an ancestral parent, true, or the direct parent, false.
      * Default is false
@@ -4049,9 +4124,9 @@ declare module 'mxgraph' {
      * @param terminal Terminal that specifies the end whose opposite should be
      * returned.
      * @param sources Optional boolean that specifies if source terminals should be
-     * included in the result. Default is true.
+     * included in the result. Default is `true`.
      * @param targets Optional boolean that specifies if targer terminals should be
-     * included in the result. Default is true.
+     * included in the result. Default is `true`.
      */
     getOpposites(edges: mxCell[], terminal: mxCellState, sources?: boolean, targets?: boolean): mxCellState[];
 
@@ -4072,7 +4147,7 @@ declare module 'mxgraph' {
      *
      * @param evt Mousevent that contains the mouse pointer location.
      * @param addOffset Optional boolean that specifies if the position should be
-     * offset by half of the {@link gridSize}. Default is true.
+     * offset by half of the {@link gridSize}. Default is `true`.
      */
     getPointForEvent(evt: MouseEvent, addOffset: boolean): mxPoint;
 
@@ -4125,7 +4200,7 @@ declare module 'mxgraph' {
      * false.
      * @param invert Optional boolean that specifies if outgoing or incoming edges
      * should be counted for a tree root. If false then outgoing edges will be
-     * counted. Default is false.
+     * counted. Default is `false`.
      */
     findTreeRoots(parent: mxCell, isolate?: boolean, invert?: boolean): mxCell[];
 
@@ -4149,13 +4224,13 @@ declare module 'mxgraph' {
      *
      * @param vertex {@link mxCell} that represents the vertex where the traversal starts.
      * @param directed Optional boolean indicating if edges should only be traversed
-     * from source to target. Default is true.
+     * from source to target. Default is `true`.
      * @param func Visitor function that takes the current vertex and the incoming
      * edge as arguments. The traversal stops if the function returns false.
      * @param edge Optional {@link mxCell} that represents the incoming edge. This is
      * null for the first step of the traversal.
      * @param visited Optional {@link mxDictionary} from cells to true for the visited cells.
-     * @param inverse Optional boolean to traverse in inverse direction. Default is false.
+     * @param inverse Optional boolean to traverse in inverse direction. Default is `false`.
      * This is ignored if directed is false.
      */
     traverse(
@@ -4292,7 +4367,7 @@ declare module 'mxgraph' {
      * @param parent Optional {@link mxCell} whose children should be selected.
      * Default is {@link defaultParent}.
      * @param descendants Optional boolean specifying whether all descendants should be
-     * selected. Default is false.
+     * selected. Default is `false`.
      */
     selectAll(parent: mxCell, descendants?: boolean): void;
 
@@ -4317,7 +4392,7 @@ declare module 'mxgraph' {
      * @param parent Optional {@link mxCell} that acts as the root of the recursion.
      * Default is {@link defaultParent}.
      * @param selectGroups Optional boolean that specifies if groups should be
-     * selected. Default is false.
+     * selected. Default is `false`.
      */
     selectCells(vertices: boolean, edges: boolean, parent?: mxCell, selectGroups?: boolean): void;
 
@@ -4450,7 +4525,7 @@ declare module 'mxgraph' {
      *
      * @param evtName String that specifies the type of event to be dispatched.
      * @param me {@link mxMouseEvent} to be fired.
-     * @param sender Optional sender argument. Default is this.
+     * @param sender Optional sender argument. Default is `this`.
      */
     fireMouseEvent(evtName: string, me: mxMouseEvent, sender?: mxEventSource): void;
 
