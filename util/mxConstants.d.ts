@@ -407,13 +407,13 @@ declare module 'mxgraph' {
      * Defines the color to be used for the handle stroke color. Use 'none' for
      * no color. Default is black.
      */
-    static HANDLE_STROKECOLOR: 'black';
+    static HANDLE_STROKECOLOR: string;
 
     /**
      * Defines the color to be used for the label handle fill color. Use 'none'
      * for no color. Default is yellow.
      */
-    static LABEL_HANDLE_FILLCOLOR: 'yellow';
+    static LABEL_HANDLE_FILLCOLOR: string;
 
     /**
      * Defines the color to be used for the connect handle fill color. Use
