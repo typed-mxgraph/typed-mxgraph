@@ -1,18 +1,19 @@
+/// <reference path="../index.d.ts" />
 import factory, { mxGraphExportObject } from 'mxgraph';
 
 describe('factory', () => {
-  let mxgraph: mxGraphExportObject;
+  let mx: mxGraphExportObject;
 
   beforeAll(() => {
-    mxgraph = factory();
+    mx = factory();
   });
 
   it('should be created', () => {
-    expect(mxgraph).toBeDefined();
+    expect(mx).toBeDefined();
   });
 
   it('version should be string', () => {
-    expect(typeof(mxgraph.mxClient.VERSION)).toEqual('string');
+    expect(typeof(mx.mxClient.VERSION)).toEqual('string');
   });
 
 });
