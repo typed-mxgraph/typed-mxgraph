@@ -1,0 +1,9 @@
+node_modules/
+tests/
+
+.idea/
+.vscode/
+.github/
+
+jest.config.ts
+tsconfig.spec.json
