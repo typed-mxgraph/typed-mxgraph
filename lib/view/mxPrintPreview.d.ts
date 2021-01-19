@@ -341,7 +341,7 @@ declare module 'mxgraph' {
      * @param targetWindow Optional window that should be used for rendering. If
      * this is specified then no HEAD tag, CSS and BODY tag will be written.
      */
-    open(css: string, targetWindow?: Window, forcePageBreaks?: boolean, keepOpen?: boolean): Window;
+    open(css?: string, targetWindow?: Window, forcePageBreaks?: boolean, keepOpen?: boolean): Window;
 
     /**
      * Adds a page break to the given document.
