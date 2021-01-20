@@ -80,7 +80,10 @@ mxGraph Typescript Declarations For [Official mxGraph NPM Package][mxgraph].
     }
     ```
 
-Demo: https://github.com/typed-mxgraph/typed-mxgraph-demo
+Demos: 
+- https://github.com/typed-mxgraph/typed-mxgraph-example-bundled-with-rollup
+- https://github.com/typed-mxgraph/typed-mxgraph-example-bundled-with-webpac
+
 
 
 ### Implementation
