@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "pretest": "tsc --noEmit",
-    "test": "jest",
+    "test": "jest --verbose",
     "eslint": "eslint \"**/*.d.ts\"",
     "prettier": "prettier --write \"**/*.d.ts\"",
     "prettier:check": "prettier --check \"**/*.d.ts\""

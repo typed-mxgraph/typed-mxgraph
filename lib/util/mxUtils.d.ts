@@ -35,7 +35,7 @@ declare module 'mxgraph' {
      * @param scope
      * @param func
      */
-    static bind(scope: any, func: Function): Function;
+    static bind<T extends Function>(scope: any, func: T): T;
 
     /**
      * Converts the specified point (x, y) using the offset of the specified container and returns a new mxPoint with the result.
