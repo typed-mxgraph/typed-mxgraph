@@ -200,7 +200,7 @@ declare module 'mxgraph' {
      *
      * Parameters:
      *
-     * @param vertexBoolean that specifies if the cell is a vertex.
+     * @param vertex Boolean that specifies if the cell is a vertex.
      */
     setVertex(vertex: boolean): void;
 
@@ -215,7 +215,7 @@ declare module 'mxgraph' {
      *
      * Parameters:
      *
-     * @param edgeBoolean that specifies if the cell is an edge.
+     * @param edge Boolean that specifies if the cell is an edge.
      */
     setEdge(edge: boolean): void;
 
@@ -229,7 +229,7 @@ declare module 'mxgraph' {
      *
      * Parameters:
      *
-     * @param connectableBoolean that specifies the new connectable state.
+     * @param connectable Boolean that specifies the new connectable state.
      */
     setConnectable(connectable: boolean): void;
 
@@ -243,7 +243,7 @@ declare module 'mxgraph' {
      *
      * Parameters:
      *
-     * @param visibleBoolean that specifies the new visible state.
+     * @param visible Boolean that specifies the new visible state.
      */
     setVisible(visible: boolean): void;
 
@@ -257,7 +257,7 @@ declare module 'mxgraph' {
      *
      * Parameters:
      *
-     * @param collapsedBoolean that specifies the new collapsed state.
+     * @param collapsed Boolean that specifies the new collapsed state.
      */
     setCollapsed(collapsed: boolean): void;
 
@@ -280,10 +280,10 @@ declare module 'mxgraph' {
      *
      * Parameters:
      *
-     * @param sourceBoolean that specifies if the source terminal should be
+     * @param source Boolean that specifies if the source terminal should be
      * returned.
      */
-    getTerminal(source: mxCell): mxCell;
+    getTerminal(source: boolean): mxCell;
 
     /**
      * Sets the source or target terminal and returns the new terminal.
@@ -378,7 +378,7 @@ declare module 'mxgraph' {
      * Parameters:
      *
      * @param edge              <mxCell> to be inserted into the edge array.
-     * @param isOutgoingBoolean that specifies if the edge is outgoing.
+     * @param isOutgoing Boolean that specifies if the edge is outgoing.
      */
     insertEdge(edge: mxCell, isOutgoing: boolean): mxCell;
 
@@ -389,7 +389,7 @@ declare module 'mxgraph' {
      * Parameters:
      *
      * @param edge<mxCell> to be removed from the edge array.
-     * @param isOutgoingBoolean that specifies if the edge is outgoing.
+     * @param isOutgoing Boolean that specifies if the edge is outgoing.
      */
     removeEdge(edge: mxCell, isOutgoing: boolean): mxCell;
 
@@ -398,7 +398,7 @@ declare module 'mxgraph' {
      *
      * Parameters:
      *
-     * @param isSourceBoolean that specifies if the edge should be removed from its source or target terminal.
+     * @param isSource Boolean that specifies if the edge should be removed from its source or target terminal.
      */
     removeFromTerminal(isSource: boolean): mxCell;
 
