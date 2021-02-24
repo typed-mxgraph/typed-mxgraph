@@ -15,4 +15,8 @@ describe('factory', () => {
     [].sort(compareFn);
   });
 
+  it('mxUtils.getPrettyXml should be a function', () => {
+    expect(typeof(mx.mxUtils.getPrettyXml)).toEqual('function');
+  });
+
 });

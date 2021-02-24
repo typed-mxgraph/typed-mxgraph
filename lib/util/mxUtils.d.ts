@@ -559,7 +559,7 @@ declare module 'mxgraph' {
      * @param {string} [newline='\n'] Option string that represents a linefeed. Default is '\n'.
      * @param ns
      */
-    static getPrettyXML(node: XMLDocument, tab?: string, indent?: string, newline?: string, ns?: any): string;
+    static getPrettyXml(node: XMLDocument, tab?: string, indent?: string, newline?: string, ns?: any): string;
 
     /**
      * Returns the text content of the specified node.
