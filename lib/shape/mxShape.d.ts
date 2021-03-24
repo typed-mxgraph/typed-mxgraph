@@ -324,6 +324,10 @@ declare module 'mxgraph' {
      */
     useSvgBoundingBox: boolean;
 
+    // https://github.com/jgraph/mxgraph/blob/v4.2.2/javascript/src/js/view/mxCellRenderer.js#L562
+    // set the property on mxShape and not only on mxImageShape to allow mxCellOverlay extension
+    overlay: mxCellOverlay;
+
     /**
      * Function: init
      *
