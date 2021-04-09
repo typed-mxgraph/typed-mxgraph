@@ -109,6 +109,10 @@ declare module 'mxgraph' {
      */
     text: mxText;
 
+    // used in https://github.com/jgraph/mxgraph/blob/v4.2.2/javascript/src/js/view/mxCellRenderer.js#L555
+    // set the type to mxShape and not only to mxImageShape to allow mxCellOverlay extension
+    overlays: mxDictionary<mxShape>;
+
     /**
      * Variable: unscaledWidth
      *
