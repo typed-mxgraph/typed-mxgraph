@@ -877,9 +877,9 @@ declare module 'mxgraph' {
     createTooltipHandler(): mxTooltipHandler;
 
     /**
-     * Creates and returns a new {@link mxTooltipHandler} to be used in this graph.
+     * Creates and returns a new {@link mxSelectionCellsHandler} to be used in this graph.
      */
-    createSelectionCellsHandler: mxSelectionCellsHandler;
+    createSelectionCellsHandler(): mxSelectionCellsHandler;
 
     /**
      * Creates and returns a new {@link mxConnectionHandler} to be used in this graph.
