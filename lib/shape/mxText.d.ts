@@ -59,14 +59,12 @@ declare module 'mxgraph' {
     );
 
     protected value: string;
-    protected bounds: mxRectangle;
     protected color: string;
     protected valign: string;
     protected align: string;
     protected family: string;
     protected size: number;
     protected fontStyle: number;
-    protected spacing: number;
     protected spacingTop: number;
     protected spacingRight: number;
     protected spacingBottom: number;
