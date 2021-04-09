@@ -879,7 +879,7 @@ declare module 'mxgraph' {
     /**
      * Creates and returns a new {@link mxTooltipHandler} to be used in this graph.
      */
-    createSelectionCellsHandler: mxSelectionCellsHandler;
+    createSelectionCellsHandler(): mxSelectionCellsHandler;
 
     /**
      * Creates and returns a new {@link mxConnectionHandler} to be used in this graph.
