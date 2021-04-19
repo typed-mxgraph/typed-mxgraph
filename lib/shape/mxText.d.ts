@@ -58,27 +58,25 @@ declare module 'mxgraph' {
       textDirection?: string
     );
 
-    protected value: string;
-    protected bounds: mxRectangle;
-    protected color: string;
-    protected valign: string;
-    protected align: string;
-    protected family: string;
-    protected size: number;
-    protected fontStyle: number;
-    protected spacing: number;
-    protected spacingTop: number;
-    protected spacingRight: number;
-    protected spacingBottom: number;
-    protected spacingLeft: number;
-    protected horizontal: boolean;
-    protected background: string;
-    protected border: string;
-    protected wrap: boolean;
-    protected clipped: boolean;
-    protected overflow: string;
-    protected labelPadding: string;
-    protected textDirection: string;
+    value: string;
+    color: string;
+    valign: string;
+    align: string;
+    family: string;
+    size: number;
+    fontStyle: number;
+    spacingTop: number;
+    spacingRight: number;
+    spacingBottom: number;
+    spacingLeft: number;
+    horizontal: boolean;
+    background: string;
+    border: string;
+    wrap: boolean;
+    clipped: boolean;
+    overflow: string;
+    labelPadding: string;
+    textDirection: string;
 
     /**
      * Specifies the spacing to be added to the top spacing. Use the
