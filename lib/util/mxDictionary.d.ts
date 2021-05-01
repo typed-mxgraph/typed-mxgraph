@@ -5,7 +5,10 @@ declare module 'mxgraph' {
     /**
      * Stores the (key, value) pairs in this dictionary.
      */
-    map: { [key: any]: T };
+    // the key is always a string
+    // https://github.com/jgraph/mxgraph/blob/v4.2.2/javascript/src/js/util/mxDictionary.js#L44: call mxObjectIdentity.get(key)
+    // https://github.com/jgraph/mxgraph/blob/v4.2.2/javascript/src/js/util/mxObjectIdentity.js#L36: always returns a string
+    map: { [key: string]: T };
 
     /**
      * Clears the dictionary.
