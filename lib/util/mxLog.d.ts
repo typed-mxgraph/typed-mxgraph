@@ -59,7 +59,7 @@ declare module 'mxgraph' {
     /**
      * Writes the specified string to the console if TRACE is true and returns the current time in milliseconds.
      */
-    static enter(string: string): void;
+    static enter(string: string): number;
 
     /**
      * Adds all arguments to the console if DEBUG is enabled.
@@ -74,11 +74,11 @@ declare module 'mxgraph' {
     /**
      * Adds the specified strings to the console.
      */
-    static write(): void;
+    static write(message: string): void;
 
     /**
      * Adds the specified strings to the console, appending a linefeed at the end of each string.
      */
-    static writeln(): void;
+    static writeln(message: string): void;
   }
 }
