@@ -75,7 +75,7 @@ declare module 'mxgraph' {
     wrap: boolean;
     clipped: boolean;
     overflow: string;
-    labelPadding: string;
+    labelPadding: number;
     textDirection: string;
 
     /**
