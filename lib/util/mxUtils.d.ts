@@ -539,7 +539,7 @@ declare module 'mxgraph' {
      * @param {string} s String that contains the characters to be converted.
      * @param {boolean} newline If newlines should be replaced. Default is true.
      */
-    htmlEntities(s: string, newline: boolean): string;
+    static htmlEntities(s: string, newline?: boolean): string;
 
     /**
      * Returns true if the given node is in the VML namespace.
