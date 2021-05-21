@@ -152,7 +152,7 @@ declare module 'mxgraph' {
     /**
      * Rounds all numbers to integers.
      */
-    format(value: number): number;
+    format(value: number | string): number;
 
     /**
      * Adds the given operation to the path.

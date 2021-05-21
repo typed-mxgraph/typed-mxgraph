@@ -160,7 +160,7 @@ declare module 'mxgraph' {
     /**
      * Rounds all numbers to 2 decimal points.
      */
-    format(value: string): number;
+    format(value: string | number): number;
 
     /**
      * Returns the URL of the page without the hash part. This needs to use href to
