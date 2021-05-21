@@ -1266,7 +1266,7 @@ declare module 'mxgraph' {
      * @param source
      * @param target
      */
-    createEdge(source: any, target: any): any;
+    createEdge(source: any, target: any): mxCell;
 
     /**
      * Returns a string identifying the style of new edges.
