@@ -27,7 +27,7 @@ declare module 'mxgraph' {
     /**
      * Returns a formatted number with 2 decimal places.
      */
-    format(value: string): number;
+    format(value: string | number): number;
 
     /**
      * Creates the given element using the owner document of {@link root}.
