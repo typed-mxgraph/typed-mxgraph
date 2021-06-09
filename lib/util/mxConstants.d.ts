@@ -349,13 +349,13 @@ declare module 'mxgraph' {
      * Defines the dashed state to be used for the vertex selection
      * border. Default is true.
      */
-    static VERTEX_SELECTION_DASHED: true;
+    static VERTEX_SELECTION_DASHED: boolean;
 
     /**
      * Defines the dashed state to be used for the edge selection
      * border. Default is true.
      */
-    static EDGE_SELECTION_DASHED: true;
+    static EDGE_SELECTION_DASHED: boolean;
 
     /**
      * Defines the color to be used for the guidelines in mxGraphHandler.
