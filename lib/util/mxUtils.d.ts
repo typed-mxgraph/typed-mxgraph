@@ -1015,7 +1015,7 @@ declare module 'mxgraph' {
      * @param {string} str
      * @param {string} chars
      */
-    static ltrim(str: string, chars: string): string | null;
+    static ltrim(str: string, chars?: string): string | null;
 
     /**
      * Strips all whitespaces from the end of the string. Without the second
@@ -1031,7 +1031,7 @@ declare module 'mxgraph' {
      * @param {string} str
      * @param {string} chars
      */
-    static rtrim(str: string, chars: string): string | null;
+    static rtrim(str: string, chars?: string): string | null;
 
     /**
      * Strips all whitespaces from both end of the string.
@@ -1048,7 +1048,7 @@ declare module 'mxgraph' {
      * @param {string} str
      * @param {string} chars
      */
-    static trim(str: string, chars: string): string | null;
+    static trim(str: string, chars?: string): string | null;
 
     /**
      * Returns true if the specified value is numeric, that is, if it is not
