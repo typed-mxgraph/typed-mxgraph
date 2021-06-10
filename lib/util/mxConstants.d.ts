@@ -349,13 +349,13 @@ declare module 'mxgraph' {
      * Defines the dashed state to be used for the vertex selection
      * border. Default is true.
      */
-    static VERTEX_SELECTION_DASHED: true;
+    static VERTEX_SELECTION_DASHED: boolean;
 
     /**
      * Defines the dashed state to be used for the edge selection
      * border. Default is true.
      */
-    static EDGE_SELECTION_DASHED: true;
+    static EDGE_SELECTION_DASHED: boolean;
 
     /**
      * Defines the color to be used for the guidelines in mxGraphHandler.
@@ -479,7 +479,7 @@ declare module 'mxgraph' {
      * Specifies if absolute line heights should be used (px) in CSS. Default
      * is false. Set this to true for backwards compatibility.
      */
-    static ABSOLUTE_LINE_HEIGHT: false;
+    static ABSOLUTE_LINE_HEIGHT: boolean;
 
     /**
      * Defines the default style for all fonts. Default is 0. This can be set
