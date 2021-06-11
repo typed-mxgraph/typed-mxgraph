@@ -1045,7 +1045,7 @@ declare module 'mxgraph' {
      * @param cell Optional {@link mxCell} that represents the root of the subtree to
      * remove the overlays from. Default is the root in the model.
      */
-    clearCellOverlays(cell: mxCell): void;
+    clearCellOverlays(cell?: mxCell): void;
 
     /**
      * Creates an overlay for the given cell using the warning and image or
