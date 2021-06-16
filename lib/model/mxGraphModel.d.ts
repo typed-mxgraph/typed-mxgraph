@@ -527,7 +527,7 @@ declare module 'mxgraph' {
      * @param edges  Boolean indicating if child edges should be returned.
      * Default is false.
      */
-    getChildCells(parent: mxCell, vertices: boolean, edges: boolean): Array<mxCell>;
+    getChildCells(parent: mxCell, vertices?: boolean, edges?: boolean): Array<mxCell>;
 
     /**
      * Returns the source or target {@link mxCell} of the given edge depending on the
