@@ -31,7 +31,7 @@ declare module 'mxgraph' {
     /**
      * Prepares the marker by adding offsets in pts and returning a function to paint the marker.
      */
-    createMarker(c: mxAbstractCanvas2D, pts: mxPoint[], source: boolean): mxMarker;
+    createMarker(c: mxAbstractCanvas2D, pts: mxPoint[], source: boolean): () => void;
 
     /**
      * Augments the bounding box with the strokewidth and shadow offsets.
