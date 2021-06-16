@@ -299,7 +299,7 @@ declare module 'mxgraph' {
      *
      * Starts a new connection for the given state and coordinates.
      */
-    start(state: mxCellState, x: number, y: number, edgeState: mxCellState): void;
+    start(state: mxCellState, x: number, y: number, edgeState?: mxCellState): void;
 
     /**
      * Function: isConnecting
