@@ -58,7 +58,7 @@ mxGraph Typescript Declarations For [Official mxGraph NPM Package][mxgraph].
     ```ts
     // src/application.ts
     import mx from './mxgraph';                       // <- import values from factory()
-    import { mxGraph, mxGraphModel } from 'mxgraph';  // <- import types only
+    import type { mxGraph, mxGraphModel } from 'mxgraph';  // <- import types only, "import type" is a TypeScript 3.8+ syntax
 
     export class Application {
 
