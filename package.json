@@ -23,12 +23,8 @@
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
   },
-  "peerDependencies": {
-    "mxgraph": "^4.2.2"
-  },
   "description": "mxGraph typescript declarations",
   "main": "index.d.ts",
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/typed-mxgraph/typed-mxgraph.git"
