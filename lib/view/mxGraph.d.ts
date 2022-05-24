@@ -2548,7 +2548,7 @@ declare module 'mxgraph' {
      * argument that keeps the graph scrolled to the center. If the center argument
      * is omitted, then {@link centerZoom} will be used as its value.
      */
-    zoom(factor: number, center: boolean): void;
+    zoom(factor: number, center?: boolean): void;
 
     /**
      * Zooms the graph to the specified rectangle. If the rectangle does not have same aspect
