@@ -47,8 +47,22 @@ mxGraph Typescript Declarations For [Official mxGraph NPM Package][mxgraph].
     ```ts
     // src/mxgraph.ts
     import factory from 'mxgraph';
+    
+    declare global {
+      interface Window {
+        mxBasePath: string;
+        mxLoadResources: boolean;
+        mxForceIncludes: boolean;
+        mxLoadStylesheets: boolean;
+        mxResourceExtension: string;
+      }
+    }
 
-    (window as any)['mxBasePath'] = 'assets/mxgraph';
+    window.mxBasePath = 'assets/mxgraph';
+    window.mxLoadResources = true;
+    window.mxForceIncludes = false;
+    window.mxLoadStylesheets = true;
+    window.mxResourceExtension = '.txt';
 
     export default factory({
       // not working see https://github.com/jgraph/mxgraph/issues/479
@@ -79,6 +93,17 @@ mxGraph Typescript Declarations For [Official mxGraph NPM Package][mxgraph].
 
     }
     ```
+    
+There a known issues is https://github.com/typed-mxgraph/typed-mxgraph/issues/50 the error message may look similar to
+
+```
+Uncaught TypeError: Cannot set properties of undefined (setting 'mxBasePath')
+```
+
+For detailed reasons, please refer to:
+
+- https://github.com/typed-mxgraph/typed-mxgraph/issues/50#issuecomment-1114008885
+- and https://github.com/typed-mxgraph/typed-mxgraph/issues/50#issuecomment-1120176914
 
 Demos: 
 - https://github.com/typed-mxgraph/typed-mxgraph-example-bundled-with-rollup
