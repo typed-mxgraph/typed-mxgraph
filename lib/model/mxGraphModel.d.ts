@@ -1,3 +1,5 @@
+import { mxCell } from 'mxgraph';
+
 declare module 'mxgraph' {
   /**
    * Extends {@link mxEventSource} to implement a graph model. The graph model acts as
@@ -280,7 +282,7 @@ declare module 'mxgraph' {
      * Returns the cells from the given array where the given filter function
      * returns true.
      */
-    filterCells(cells: Array<mxCell>, filter: (...args: any) => boolean): Array<mxCell>;
+    filterCells(cells: Array<mxCell>, filter: (cell: mxCell) => boolean): Array<mxCell>;
 
     /**
      * Returns all descendants of the given cell and the cell itself in an array.
@@ -309,7 +311,7 @@ declare module 'mxgraph' {
      * and returns a boolean.
      * @param parent  Optional {@link mxCell} that is used as the root of the recursion.
      */
-    filterDescendants(filter: (...args: any) => boolean, parent?: mxCell): Array<mxCell>;
+    filterDescendants(filter: (cell: mxCell) => boolean, parent?: mxCell): Array<mxCell>;
 
     /**
      * Returns the root of the model or the topmost parent of the given cell.
