@@ -1,0 +1,25 @@
+name: Publish Package
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        cache: 'npm'
+        node-version: 18.x
+        registry-url: 'https://registry.npmjs.org'
+    - run: npm ci
+    - run: npm run prettier:check
+    - run: npm run lint
+    - run: npm test
+    - run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
