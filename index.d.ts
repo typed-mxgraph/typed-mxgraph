@@ -151,6 +151,15 @@ declare module 'mxgraph' {
     mxDefaultToolbarCodec: mxObjectCodec;
     mxDefaultPopupMenuCodec: mxObjectCodec;
     mxEditorCodec: mxObjectCodec;
+    mxRootChange: typeof mxRootChange;
+    mxGeometryChange: typeof mxGeometryChange;
+    mxChildChange: typeof mxChildChange;
+    mxStyleChange: typeof mxStyleChange;
+    mxVisibleChange: typeof mxVisibleChange;
+    mxCollapseChange: typeof mxCollapseChange;
+    mxValueChange: typeof mxValueChange;
+    mxTerminalChange: typeof mxTerminalChange;
+    mxCurrentRootChange: typeof mxCurrentRootChange;
   }
 
   export type mxGraphOptions = {

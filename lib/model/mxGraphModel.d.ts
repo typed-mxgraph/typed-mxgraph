@@ -1088,6 +1088,24 @@ declare module 'mxgraph' {
    */
   class mxStyleChange {
     constructor(model: mxGraphModel, cell: mxCell, style?: string);
+
+    /**
+     * The mxCell whose style will be changed.
+     */
+    cell: mxCell;
+
+    model: mxGraphModel;
+
+    /**
+     * The previous style of the cell.
+     */
+    previous: string;
+
+    /**
+     * The new style for the cell.
+     */
+    style?: string;
+
     /**
      * Function: execute
      *
