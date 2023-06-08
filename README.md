@@ -151,6 +151,17 @@ The definitions target mxGraph `4.2.2`. See the implementation status in the fol
 
 * converting mxGraph API documentation to TSDoc: see [regexp conversion helpers](./tsdoc-conversion-helpers.md) 
 
+### Publish
+
+Now we use [github action](./.github/workflows/tagged-release.yml) to automatically publish npm package.
+
+Here are the steps to publish:
+
+1. Merge PR to `master` branch
+2. On `master` branch exec `npm version <minor | patch>` to
+   automatically modify the version number and generate tags
+3. On `master` branch exec `git push origin master --tags`
+4. Then wait for the github action complete
 
 ### Also See
 
