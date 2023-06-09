@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "tsc --noEmit",
     "test": "jest --verbose",
-    "eslint": "eslint \"**/*.d.ts\"",
+    "lint": "eslint \"**/*.d.ts\"",
     "prettier": "prettier --write \"**/*.d.ts\"",
     "prettier:check": "prettier --check \"**/*.d.ts\""
   },
