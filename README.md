@@ -153,7 +153,7 @@ The definitions target mxGraph `4.2.2`. See the implementation status in the fol
 
 ### Publish
 
-Now we use [github action](./.github/workflows/tagged-release.yml) to automatically publish npm package.
+Now we use [GitHub Actions](./.github/workflows/release.yml) to automatically publish npm package.
 
 Here are the steps to publish:
 
