@@ -1,6 +1,15 @@
 Typed mxGraph
 ====
 
+
+## Archived
+
+[maxGraph/maxGraph](https://github.com/maxGraph/maxGraph) is the successor to [jgraph/mxgraph](https://github.com/jgraph/mxgraph). 
+It has done an excellent job, being rewritten in TypeScript and actively developed. 
+I have decided to archive this repository and I highly recommend using maxGraph/maxGraph as a replacement for this library.
+
+---
+
 [![Build](https://github.com/typed-mxgraph/typed-mxgraph/workflows/Validation/badge.svg)](https://github.com/typed-mxgraph/typed-mxgraph/actions)
 [![npm version](https://badge.fury.io/js/%40typed-mxgraph%2Ftyped-mxgraph.svg)](https://www.npmjs.com/package/@typed-mxgraph/typed-mxgraph)
 [![GitHub license](https://img.shields.io/github/license/typed-mxgraph/typed-mxgraph)](https://github.com/typed-mxgraph/typed-mxgraph/blob/master/LICENSE)
